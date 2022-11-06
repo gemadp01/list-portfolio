@@ -1,0 +1,28 @@
+.jumbotron {
+  padding-top: 10rem;
+  background-color: #e2edff;
+}
+
+#projects {
+  background-color: #e2edff;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+img.profile {
+  filter: saturate(1);
+}
+
+img.projects {
+  filter: saturate(1);
+}
+
+img {
+  filter: saturate(0);
+}
+
+img:hover {
+  filter: saturate(1);
+}
