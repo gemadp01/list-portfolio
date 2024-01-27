@@ -18,3 +18,10 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('hamburger-active');
   navMenu.classList.toggle('hidden');
 });
+
+// Techstack
+const frontEnd = document.querySelector('#front-end');
+const backEnd = document.querySelector('#back-end');
+const techStack = document.querySelector('#tech-stack .tech-stack div');
+
+frontEnd.addEventListener('click', () => {});
