@@ -33,3 +33,11 @@
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
 }
+
+#nav-menu li.active a {
+  @apply text-primary;
+}
+
+.ts-button-active {
+  @apply bg-white border border-white text-current;
+}

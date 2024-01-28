@@ -19,9 +19,53 @@ hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('hidden');
 });
 
-// Techstack
-const frontEnd = document.querySelector('#front-end');
-const backEnd = document.querySelector('#back-end');
-const techStack = document.querySelector('#tech-stack .tech-stack div');
+// navmenu active
+const navBar = document.querySelectorAll('#nav-menu ul li');
 
-frontEnd.addEventListener('click', () => {});
+navMenu.addEventListener('click', (e) => {
+  navBar.forEach((item) => {
+    item.classList.remove('active');
+  });
+
+  e.target.parentElement.classList.add('active');
+});
+
+// Techstack
+const feButton = document.getElementById('fe-button');
+const beButton = document.getElementById('be-button');
+const tsfe = document.querySelector('#tech-stack .ts-fe');
+const tsbe = document.querySelector('#tech-stack .ts-be');
+
+function toggleActive(buttonId) {
+  let buttons = document.querySelectorAll('.ts-button button');
+
+  buttons.forEach((button) => {
+    if (button.id === buttonId) {
+      button.classList.add('ts-button-active');
+    } else {
+      button.classList.remove('ts-button-active');
+    }
+  });
+}
+
+// Menambahkan event listener pada tombol Front-end
+feButton.addEventListener('click', function () {
+  toggleActive('fe-button');
+  if (feButton.classList.contains('ts-button-active')) {
+    tsfe.classList.remove('hidden');
+    tsbe.classList.add('hidden');
+  } else {
+    tsfe.classList.remove('hidden');
+  }
+});
+
+// Menambahkan event listener pada tombol Back-end
+beButton.addEventListener('click', function () {
+  toggleActive('be-button');
+  if (beButton.classList.contains('ts-button-active')) {
+    tsbe.classList.remove('hidden');
+    tsfe.classList.add('hidden');
+  } else {
+    tsbe.classList.add('hidden');
+  }
+});
