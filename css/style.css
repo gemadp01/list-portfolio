@@ -19,10 +19,18 @@ img.projects {
   filter: saturate(1);
 }
 
-img {
+/* img {
   filter: saturate(0);
 }
 
 img:hover {
   filter: saturate(1);
+} */
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
 }
